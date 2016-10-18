@@ -1,0 +1,12 @@
+<h3>Orders</h3>
+<% @orders.each do |order| %>
+  <p>Customer Name</p>
+  <%= order.customer_name %>
+  <p>Customer Address</p>
+  <%= order.customer_address %>
+  <p>Size</p>
+  <%= order.size %>
+  <p>Quantity</p>
+  <%= order.quantity %>
+  <hr>
+<% end %>
