@@ -4,12 +4,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h3 {
+h1, h3 {
   text-align: center;
   color: navy;
 }
 
-#order {
+#main-div, #nav-bar {
   max-width: 50%;
   display: block;
   margin: auto;
