@@ -2,7 +2,8 @@ require_relative '../db/sql_runner.rb'
 
 class Order
 
-  attr_reader(:customer_name, :customer_address, :quantity, :size, :id)
+  attr_accessor :customer_name, :customer_address, :quantity, :size
+  attr_reader :id
 
   def initialize(params)
     @id = nil || params['id'].to_i
@@ -27,6 +28,21 @@ class Order
     return orders
   end
 
-
+  def update()
+    sql = "
+      UPDATE orders
+      SET customer_name = '#{@customer_name}',
+        customer_address = '#{@customer_address}',
+        quantity = '#{@quantity}',
+        size = '#{@size}'
+      WHERE id = #{@id}
+    ;"
+    return SqlRunner.run(sql)
+  end
 
 end
+
+
+
+
+

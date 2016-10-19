@@ -18,4 +18,8 @@ class TestOrder < MiniTest::Test
     assert_equal(3, @order.quantity)
   end
 
+  # def test_update()
+  #   assert_equal('The Citadel', )
+  # end
+
 end

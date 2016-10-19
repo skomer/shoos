@@ -1,9 +1,14 @@
+
 <h3>Orders</h3>
 <% @orders.each do |order| %>
   <p>Customer Name: <%= order.customer_name %></p>
   <p>Customer Address: <%= order.customer_address %></p>
   <p>Size: <%= order.size %></p>
   <p>Quantity: <%= order.quantity %></p>
+  <form action="/update/<%=order.id%>" method="get">
+    <input type="submit" value="Update this order">
+  </form>
+
   <% 34.times do %>
     <img src="../images/shoe.jpeg" height="10" width="10">
   <% end %>
